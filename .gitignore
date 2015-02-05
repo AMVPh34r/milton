@@ -1,0 +1,12 @@
+# Ignore CodeIgniter dev files
+*/config/development
+*/logs/log-*.php
+*/logs/!index.html
+*/cache/*
+*/cache/!index.html
+*/cache/!.htaccess
+
+# Ignore SublimeText files
+*.sublime-project
+*.sublime-workspace
+

@@ -1,0 +1,170 @@
+/*
+	Global styles
+========================*/
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.text-vertical-center {
+	text-align: center;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.text-vertical-center h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 4.5em;
+	font-weight: 700;
+}
+
+.foreground {
+	z-index: 999;
+}
+
+hr.small {
+	max-width: 100px;
+}
+
+.bg-white {
+	background-color: #FFF;
+}
+
+/* Custom Button styles */
+.btn {
+	border-radius: 0;
+}
+
+.btn-dark {
+	color: #fff;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active {
+	color: #fff;
+	background-color: rgba(0,0,0,0.8);
+}
+
+.btn-light {
+	color: #333;
+	background-color: rgb(255,255,255);
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
+	color: #333;
+	background-color: rgba(255,255,255,0.8);
+}
+
+.button-label {
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 2px;
+}
+
+/* Navbar styles */
+nav.navbar {
+	/*position: fixed;*/
+}
+
+nav.navbar .navbar-brand {
+	cursor: default;
+	padding: 2px;
+}
+
+nav.navbar .navbar-brand img {
+	max-height: 100%;
+}
+
+nav.navbar .dropdown-menu {
+	padding: 15px;
+	min-width: 300px;
+}
+
+nav.navbar .dropdown-form input {
+	margin-bottom: 10px;
+}
+
+nav.navbar .dropdown-form ul {
+	display: inline-block;
+	padding-left: 15px;
+	list-style-type: none;
+}
+
+nav.navbar .dropdown-form ul li {
+	display: inline-block;
+}
+
+nav.navbar .dropdown-form li + li:before {
+	content: " | ";
+	padding-right: 3px;
+	padding-left: 3px;
+}
+
+
+/*
+	Landing Page styles
+========================*/
+
+.landing img.slide-bg {
+	max-width: 100%;
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.landing .divider {
+	width: 400px;
+	border-top: 1px solid #f8f8f8;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.landing .header h1,
+.landing .header h3,
+.landing .callout h1 {
+	color: #FFF;
+	text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.landing .about {
+	padding: 50px 0;
+}
+
+.landing .services {
+	padding: 50px 0;
+}
+
+.landing .service-item {
+	margin-bottom: 30px;
+}
+
+.landing .callout {
+	color: #FFF;
+}
+
+.landing footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding-top: 5px;
+}
+
+.landing footer p {
+	margin-top: 0;
+}
