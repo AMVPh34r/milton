@@ -9,8 +9,9 @@
 			<h1>Site Title</h1>
 			<h3>Some catchy subtitle</h3>
 			<hr class="divider" />
-			<a href="register" class="btn btn-light btn-lg"><span class="button-label"><strong>Sign Up</strong></span></a>
-			<a href="login" class="btn btn-dark btn-lg"><span class="button-label">Login</span></a>
+			<button type="button" class="btn btn-light btn-lg registration-link" data-toggle="modal" data-target="#registerModal"><span class="button-label"><strong>Sign Up</strong></span></button>
+			<button type="button" class="btn btn-dark btn-lg" data-toggle="dropdown" data-target="#loginDropdown"><span class="button-label">Login</span></button>
+			<!-- <a href="login" class="btn btn-dark btn-lg"><span class="button-label">Login</span></a> -->
 		</div>
 		<div class="parallax-layer parallax-layer-back">
 			<img src="themes/default/img/header-bg.jpg" class="slide-bg"/>
@@ -111,11 +112,25 @@
 			<img src="themes/default/img/callout-bg.jpg" class="slide-bg" />
 		</div>
 	</section>
-
-
 </div>
 
-<?php 
+<?php
+// Registration modal
+$this->load->view('_include/register_modal');
+
 $this->load->view('_include/scripts');
+?>
+
+<script type="text/javascript">
+	$('#loginDropdown').on('shown.bs.dropdown', function(e) {
+		$(this).find('input:nth-child(1)').focus();
+	});
+
+	$('.nav .registration-link').click(function(e) {
+		$(this).parents('.dropdown').removeClass('open');
+	});
+</script>
+
+<?php
 $this->load->view('_include/html_footer');
 ?>

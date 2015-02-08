@@ -135,6 +135,10 @@ nav.navbar .dropdown-form li + li:before {
 	border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
+.landing a.registration-link {
+	cursor: pointer;
+}
+
 .landing .header h1,
 .landing .header h3,
 .landing .callout h1 {
