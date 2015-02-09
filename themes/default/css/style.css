@@ -1,7 +1,6 @@
 /*
 	Global styles
 ========================*/
-
 html,
 body {
 	width: 100%;
@@ -15,12 +14,9 @@ body {
 }
 
 .text-vertical-center {
+	display: table-cell;
 	text-align: center;
-	position: relative;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	transform: translateY(-50%);
+	vertical-align: middle;
 }
 
 .text-vertical-center h1 {
@@ -30,12 +26,14 @@ body {
 	font-weight: 700;
 }
 
-.foreground {
-	z-index: 999;
-}
-
 hr.small {
 	max-width: 100px;
+}
+
+hr.medium {
+	width: 400px;
+	border-top: 1px solid #f8f8f8;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
 .bg-white {
@@ -78,11 +76,6 @@ hr.small {
 	letter-spacing: 2px;
 }
 
-/* Navbar styles */
-nav.navbar {
-	/*position: fixed;*/
-}
-
 nav.navbar .navbar-brand {
 	cursor: default;
 	padding: 2px;
@@ -121,22 +114,17 @@ nav.navbar .dropdown-form li + li:before {
 /*
 	Landing Page styles
 ========================*/
-
-.landing img.slide-bg {
-	max-width: 100%;
-	min-height: 100%;
-	margin: 0;
-	padding: 0;
+.landing a.registration-link {
+	cursor: pointer;
 }
 
 .landing .divider {
-	width: 400px;
-	border-top: 1px solid #f8f8f8;
-	border-bottom: 1px solid rgba(0,0,0,0.2);
+	height: 150px;
 }
 
-.landing a.registration-link {
-	cursor: pointer;
+.landing .header {
+	background: url(../img/header-bg.jpg);
+	height: 100vh;
 }
 
 .landing .header h1,
@@ -150,16 +138,9 @@ nav.navbar .dropdown-form li + li:before {
 	padding: 50px 0;
 }
 
-.landing .about img {
-	margin: auto;
-}
-
-.landing .about img.img-right {
-	margin-right: 0;
-}
-
-.landing .about img.img-left {
-	margin-left: 0;
+.landing .feature {
+	background: url(../img/about-bg.jpg);
+	height: 100vh;
 }
 
 .landing .services {
@@ -172,10 +153,26 @@ nav.navbar .dropdown-form li + li:before {
 
 .landing .callout {
 	color: #FFF;
+	background: url(../img/callout-bg.jpg);
+	height: 100vh;
+}
+
+/* Style for sections with a full background */
+.landing .parallax-bg {
+	display: table;
+	position: relative;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-origin: center;
+	background-clip: center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 .landing footer {
-	position: absolute;
 	bottom: 0;
 	width: 100%;
 	padding-top: 5px;

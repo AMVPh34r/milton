@@ -13,7 +13,6 @@
 	echo link_tag('vendor/css/bootstrap.min.css');
 	echo link_tag('vendor/fonts/font-awesome/css/font-awesome.min.css');
 
-	echo link_tag($this->sThemePath . 'css/parallax.css');
 	echo link_tag($this->sThemePath . 'css/style.css');
 	echo link_tag('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic');
 	?>

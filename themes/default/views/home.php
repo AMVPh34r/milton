@@ -1,55 +1,46 @@
 <?php $this->load->view('_include/header'); ?>
 
-<div class="landing parallax">
+<div class="landing">
 	<?php $this->load->view('_include/navbar_home'); ?>
 
 	<!-- Header -->
-	<header class="header parallax-group">
-		<div class="text-vertical-center parallax-layer parallax-layer-base">
+	<header class="header parallax-bg">
+		<div class="text-vertical-center">
 			<h1>Site Title</h1>
 			<h3>Some catchy subtitle</h3>
-			<hr class="divider" />
+			<hr class="medium" />
 			<button type="button" class="btn btn-light btn-lg registration-link" data-toggle="modal" data-target="#registerModal"><span class="button-label"><strong>Sign Up</strong></span></button>
 			<button type="button" class="btn btn-dark btn-lg" data-toggle="dropdown" data-target="#loginDropdown"><span class="button-label">Login</span></button>
-			<!-- <a href="login" class="btn btn-dark btn-lg"><span class="button-label">Login</span></a> -->
-		</div>
-		<div class="parallax-layer parallax-layer-back">
-			<img src="themes/default/img/header-bg.jpg" class="slide-bg"/>
 		</div>
 	</header>
 
 	<!-- About -->
-	<section  class="about parallax-group foreground bg-white">
-		<div class="container parallax-layer parallax-layer-base">
+	<section class="about">
+		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<h2>About</h2>
-					<hr class="small" />
+					<h2>Find and organize your classes with ease</h2>
+					<p class="lead">A few sentences introducing our service will go here. We will describe our target demographic and give a brief summary of our application and what it does.</p>
 				</div>
 			</div>
+		</div>
+	</section>
+
+	<!-- About -->
+	<section class="feature parallax-bg">
+		<div class="container text-vertical-center">
 			<div class="row">
-				<div class="col-lg-8 text-right">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam gravida, enim eget semper ultricies, urna tellus volutpat ligula, eu ornare metus ex in urna. Nulla cursus iaculis sapien, ut gravida diam rutrum non. Etiam at lacus metus. Donec maximus tincidunt ex, sit amet malesuada lorem iaculis nec. Nulla interdum erat ut felis ullamcorper gravida. Sed fermentum elit neque. Morbi condimentum ipsum luctus arcu sagittis, sit amet pharetra orci pulvinar. Nullam imperdiet vehicula lorem, quis tincidunt magna euismod laoreet. Vestibulum non vulputate quam. Suspendisse ac condimentum quam, et scelerisque nulla. Cras leo urna, fermentum ornare gravida et, euismod gravida dui. Donec sit amet sagittis nisi. Sed leo est, condimentum sed dapibus id, sodales sit amet est. Praesent ut interdum augue, id gravida augue. Sed vestibulum nunc non augue maximus faucibus. Quisque ac arcu sit amet orci lobortis bibendum.</p>
-				</div>
-				<div class="col-lg-4 text-left">
-					<img class="img-responsive img-circle img-left" src="http://placehold.it/250x250" alt="">
-				</div>
-			</div>
-			<hr />
-			<div class="row">
-				<div class="col-lg-4 text-right">
-					<img class="img-responsive img-circle img-right" src="http://placehold.it/250x250" alt="">
-				</div>
-				<div class="col-lg-8 text-left">
-					<p>Proin accumsan mauris vitae velit finibus, vitae condimentum lorem posuere. Maecenas sed vehicula erat. Nunc sed magna ultrices, condimentum velit non, aliquet nisi. Curabitur at dolor nunc. Vestibulum lacus arcu, tempor eu risus sed, lobortis eleifend tellus. Sed tincidunt faucibus convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque varius tortor nec leo vehicula varius. Nunc est tellus, scelerisque at pharetra iaculis, eleifend quis metus. Integer id lorem nisi. Mauris at velit in leo egestas vehicula. Nunc sed ipsum ligula.</p>
+				<div class="col-lg-6 col-lg-offset-6 text-center bg-white">
+					<h2>Get back to what really matters.</h2>
+					<p class="lead">Less time spent hunting for the right classes and time slots means more time actually preparing for the upcoming semester, and more free time too!</p>
 				</div>
 			</div>
 		</div>
 	</section>
 
 	<!-- Services -->
-	<section class="services parallax-group foreground bg-primary">
-		<div class="text-vertical-center container parallax-layer parallax-layer-base">
+	<section class="services bg-primary">
+		<div class="container">
 			<div class="row text-center">
 				<div class="col-lg-10 col-lg-offset-1">
 					<h2>Our Services</h2>
@@ -114,17 +105,13 @@
 	</section>
 
 	<!-- Callout -->
-	<section class="callout parallax-group">
-		<div class="parallax-layer parallax-layer-base">
-			<div class="text-vertical-center">
-				<h1>Vertically Centered Text</h1>
-			</div>
-			<?php $this->load->view('_include/footer'); ?>
-		</div>
-		<div class="parallax-layer parallax-layer-back">
-			<img src="themes/default/img/callout-bg.jpg" class="slide-bg" />
+	<section class="callout parallax-bg">
+		<div class="text-vertical-center">
+			<h1>Vertically Centered Text</h1>
 		</div>
 	</section>
+
+	<?php $this->load->view('_include/footer'); ?>
 </div>
 
 <?php
