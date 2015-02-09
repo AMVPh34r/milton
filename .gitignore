@@ -1,10 +1,12 @@
 # Ignore CodeIgniter dev files
-*/config/development
-*/logs/log-*.php
-*/logs/!index.html
-*/cache/*
-*/cache/!index.html
-*/cache/!.htaccess
+application/config/development
+application/config/testing
+application/logs/log-*.php
+application/logs/!index.html
+application/cache/*
+application/cache/!index.html
+application/cache/!.htaccess
+application/db/*
 
 # Ignore SublimeText files
 *.sublime-project
@@ -12,3 +14,4 @@
 
 # Ignore scripts and other unneeded files
 *.py
+.htaccess
