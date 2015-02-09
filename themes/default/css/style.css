@@ -26,6 +26,10 @@ body {
 	font-weight: 700;
 }
 
+hr {
+	margin: 1em auto;
+}
+
 hr.small {
 	max-width: 100px;
 }
