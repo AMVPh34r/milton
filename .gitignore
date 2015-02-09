@@ -1,4 +1,5 @@
 # Ignore CodeIgniter dev files
+application/config/database.php
 application/config/development
 application/config/testing
 application/logs/log-*.php
