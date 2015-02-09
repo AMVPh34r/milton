@@ -6,7 +6,7 @@
 				<h4 class="modal-title" id="registerModalLabel">Register</h4>
 			</div>
 			<div class="modal-body">
-				<form class="form-horizontal"name="register" method="post" action="register">
+				<form class="form-horizontal" name="register" method="post" action="register">
 					<div class="form-group">
 						<label for="register-fname" class="col-lg-3 control-label">Name:</label>
 						<div class="col-lg-4">
