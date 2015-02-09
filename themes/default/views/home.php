@@ -30,7 +30,7 @@
 	<section class="feature parallax-bg">
 		<div class="container text-vertical-center">
 			<div class="row">
-				<div class="col-lg-6 col-lg-offset-6 text-center bg-white">
+				<div class="col-xs-6 col-xs-offset-6 text-center bg-white">
 					<h2>Get back to what really matters.</h2>
 					<p class="lead">Less time spent hunting for the right classes and time slots means more time actually preparing for the upcoming semester, and more free time too!</p>
 				</div>
@@ -42,7 +42,7 @@
 	<section class="services bg-primary">
 		<div class="container">
 			<div class="row text-center">
-				<div class="col-lg-10 col-lg-offset-1">
+				<div class="col-md-10 col-md-offset-1">
 					<h2>Our Services</h2>
 					<hr class="small" />
 					<div class="row">
