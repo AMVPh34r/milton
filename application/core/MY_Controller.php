@@ -8,8 +8,8 @@
 class MY_Controller extends CI_Controller {
 
 	public $sTheme = 'default';
-	public $sThemePath;
-	public $sPageTitle = 'Page';
+	public $sThemePath = '';
+	public $sPageTitle = '';
 
 	public function __construct() {
 		parent::__construct();

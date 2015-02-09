@@ -7,7 +7,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title><?php echo $this->sPageTitle; ?> - Site Title</title>
+	<title><?php echo $this->sPageTitle !== '' ? $this->sPageTitle . ' - ' : ''; ?>Site Title</title>
 
 	<?php
 	if (in_array(ENVIRONMENT, array('development', 'testing'))) {
