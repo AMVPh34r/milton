@@ -10,3 +10,5 @@
 *.sublime-project
 *.sublime-workspace
 
+# Ignore scripts and other unneeded files
+*.py

@@ -10,11 +10,19 @@
 	<title><?php echo $this->sPageTitle; ?> - Site Title</title>
 
 	<?php
-	echo link_tag('vendor/css/reset.min.css');
-	echo link_tag('vendor/css/bootstrap.min.css');
-	echo link_tag('vendor/fonts/font-awesome/css/font-awesome.min.css');
+	if (in_array(ENVIRONMENT, array('development', 'testing'))) {
+		echo link_tag('vendor/css/reset.css');
+		echo link_tag('vendor/css/bootstrap.css');
+		echo link_tag('vendor/fonts/font-awesome/css/font-awesome.css');
 
-	echo link_tag($this->sThemePath . 'css/style.css');
+		echo link_tag($this->sThemePath . 'css/style.css');
+	} else {
+		echo link_tag('vendor/css/reset.min.css');
+		echo link_tag('vendor/css/bootstrap.min.css');
+		echo link_tag('vendor/fonts/font-awesome/css/font-awesome.min.css');
+
+		echo link_tag($this->sThemePath . 'css/style.min.css');
+	}
 	echo link_tag('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic');
 	?>
 
