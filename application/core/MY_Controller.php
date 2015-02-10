@@ -11,6 +11,8 @@ class MY_Controller extends CI_Controller {
 	public $sThemePath = '';
 	public $sPageTitle = '';
 
+	public $bPageError = FALSE;
+
 	public function __construct() {
 		parent::__construct();
 		// Set the loader to use the default theme path.
