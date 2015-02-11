@@ -18,7 +18,7 @@
 					<a href="#" id="navLogin" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-user"></i> Login</a>
 					<!-- Login dropdown -->
 					<div class="dropdown-menu">
-						<form name="login" method="post" action="login" class="dropdown-form">
+						<form name="login" method="post" action="user/login" class="dropdown-form">
 							<div class="form-group">
 								<input name="username" class="form-control" placeholder="Username" type="text" /> 
 								<input name="password" class="form-control" placeholder="Password" type="password" />
