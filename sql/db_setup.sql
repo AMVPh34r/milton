@@ -21,6 +21,26 @@ INSERT INTO `groups` (`id`, `name`, `description`) VALUES
 
 
 
+DROP TABLE IF EXISTS `syslog`;
+
+#
+# Table structure for table 'syslog'
+#
+
+CREATE TABLE `syslog` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL DEFAULT '0',
+  `type` varchar(64) NOT NULL DEFAULT '',
+  `message` text NOT NULL,
+  `location` text NOT NULL,
+  `referrer` text,
+  `hostname` varchar(128) NOT NULL DEFAULT '',
+  `timestamp` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
 DROP TABLE IF EXISTS `users`;
 
 #
