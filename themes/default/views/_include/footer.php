@@ -8,7 +8,7 @@
 			<div class="col-lg-2 text-right">
 				<p class="text-muted">
 					<?php
-					if (in_array(ENVIRONMENT, array('development', 'testing'))) {
+					if (ENVIRONMENT !== 'production') {
 						echo 'Page generated in ' . $this->benchmark->elapsed_time() . 's.';
 					}
 					?>
