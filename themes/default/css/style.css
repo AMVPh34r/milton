@@ -44,6 +44,27 @@ hr.medium {
 	background-color: #FFF;
 }
 
+.flash-message {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	top: 60px;
+	z-index: 999;
+}
+
+.flash-message p {
+	width: 85%;
+	margin: auto;
+	padding: 10px;
+	background: #33ab00;
+	opacity: 0.85;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
 /* Custom Button styles */
 .btn {
 	border-radius: 0;
@@ -89,7 +110,7 @@ nav.navbar .navbar-brand img {
 	max-height: 100%;
 }
 
-nav.navbar .dropdown-menu {
+nav.navbar .login-dropdown {
 	padding: 15px;
 	min-width: 300px;
 }

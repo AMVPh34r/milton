@@ -1,3 +1,4 @@
+<?php $sFlashMessage = $this->session->flashdata('message'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,3 +33,6 @@
 	<![endif]-->
 </head>
 <body>
+<?php if ($sFlashMessage !== NULL): ?>
+	<div class="flash-message"><?php echo $sFlashMessage; ?></div>
+<?php endif; ?>

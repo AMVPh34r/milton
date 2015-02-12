@@ -22,7 +22,13 @@ class User extends MY_Controller {
 			redirect('user/login');
 		}
 
-		$this->sPageTitle = "User Profile";
+		if ($iUserID === NULL) {
+			$oUser = $this->ion_auth->user()->row();
+		} else {
+			$oUser = $this->ion_auth->user($iUserID)->row()->id;
+		}
+
+		$this->sPageTitle = "User Profile: " . $oUser->username;
 		$this->load->view('page');
 	}
 
@@ -30,7 +36,13 @@ class User extends MY_Controller {
 	* Show the user's settings page, or save modified settings.
 	*/
 	public function settings() {
-		$this->sPageTitle = "User Settings";
+		if (!$this->ion_auth->logged_in()) {
+			redirect('user/login');
+		}
+
+		$oUser = $this->ion_auth->user()->row();
+
+		$this->sPageTitle = "User Settings: " . $oUser->username;
 		$this->load->view('page');
 	}
 
@@ -64,7 +76,8 @@ class User extends MY_Controller {
 	public function logout() {
 		$this->sPageTitle = "Logout";
 
-		$logout = $this->ion_auth->logout();
-		$this->load->view('page');
+		$this->ion_auth->logout();
+		$this->session->set_flashdata('message', $this->ion_auth->messages());
+		redirect('/', 'refresh');
 	}
 }
