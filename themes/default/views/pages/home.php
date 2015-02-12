@@ -6,7 +6,7 @@
 	<!-- Header -->
 	<header class="header parallax-bg">
 		<div class="text-vertical-center">
-			<h1>Site Title</h1>
+			<h1>Milton Class Finder</h1>
 			<h3>Some catchy subtitle</h3>
 			<hr class="medium" />
 			<button type="button" class="btn btn-light btn-lg registration-link" data-toggle="modal" data-target="#registerModal"><span class="button-label"><strong>Sign Up</strong></span></button>

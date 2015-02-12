@@ -8,7 +8,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title><?php echo $this->sPageTitle !== '' ? $this->sPageTitle . ' - ' : ''; ?>Site Title</title>
+	<title><?php echo $this->sPageTitle !== '' ? $this->sPageTitle . ' - ' : ''; ?>Milton</title>
 
 	<?php
 	if (ENVIRONMENT === 'production') {
