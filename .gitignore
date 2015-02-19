@@ -15,4 +15,5 @@ application/db/*
 
 # Ignore scripts and other unneeded files
 *.py
+*.sh
 .htaccess
