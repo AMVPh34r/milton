@@ -124,12 +124,8 @@ $this->load->view('modules/login_modal');
 ?>
 
 <script type="text/javascript">
-	$('#loginDropdown').on('shown.bs.dropdown', function(e) {
-		$(this).find('input:nth-child(1)').focus();
-	});
-
-	$('.nav .registration-link').click(function(e) {
-		$(this).parents('.dropdown').removeClass('open');
+	$('.modal').on('shown.bs.modal', function(e) {
+		$(this).find('input')[0].focus();
 	});
 </script>
 

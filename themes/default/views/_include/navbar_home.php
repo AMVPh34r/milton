@@ -16,21 +16,7 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown" id="loginDropdown">
 				<?php if (!$this->ion_auth->logged_in()): ?>
-					<a href="#" id="navLogin" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-user"></i> Login</a>
-					<!-- Login dropdown -->
-					<div class="dropdown-menu login-dropdown">
-						<form name="login" method="post" action="/user/login" class="dropdown-form">
-							<div class="form-group">
-								<input name="username" class="form-control" placeholder="Username" type="text" /> 
-								<input name="password" class="form-control" placeholder="Password" type="password" />
-							</div>
-							<button type="submit" class="btn btn-primary">Login</button>
-							<ul>
-								<li><a class="registration-link" data-toggle="modal" data-target="#registerModal">Register</a></li>
-								<li><a href="/forgot-password">Forgot Password?</a></li>
-							</ul>
-						</form>
-					</div>
+					<a href="#" id="navLogin" data-toggle="modal" data-target="#loginModal" role="button"><i class="fa fa-user"></i> Login</a>
 				<?php else: ?>
 					<?php $user = $this->ion_auth->user()->row(); ?>
 					<a href="#" id="navLogin" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-user"></i> <?php echo $user->first_name . ' ' . $user->last_name; ?></a>
