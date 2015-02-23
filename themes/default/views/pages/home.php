@@ -10,7 +10,8 @@
 			<h3>Some catchy subtitle</h3>
 			<hr class="medium" />
 			<button type="button" class="btn btn-light btn-lg registration-link" data-toggle="modal" data-target="#registerModal"><span class="button-label"><strong>Sign Up</strong></span></button>
-			<button type="button" class="btn btn-dark btn-lg" data-toggle="dropdown" data-target="#loginDropdown"><span class="button-label">Login</span></button>
+			<!-- <button type="button" class="btn btn-dark btn-lg" data-toggle="dropdown" data-target="#loginDropdown"><span class="button-label">Login</span></button> -->
+			<button type="button" class="btn btn-dark btn-lg login-link" data-toggle="modal" data-target="#loginModal"><span class="button-label"><strong>Login</strong></span></button>
 		</div>
 	</header>
 
@@ -115,10 +116,11 @@
 </div>
 
 <?php
-// Registration modal
-$this->load->view('_include/register_modal');
-
 $this->load->view('_include/scripts');
+
+// Registration/login modals
+$this->load->view('modules/register_modal');
+$this->load->view('modules/login_modal');
 ?>
 
 <script type="text/javascript">

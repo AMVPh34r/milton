@@ -206,3 +206,48 @@ nav.navbar .dropdown-form li + li:before {
 .landing footer p {
 	margin-top: 0;
 }
+
+/* Login form styles */
+#login-form .form-control {
+	position: relative;
+	height: auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px;
+	font-size: 16px;
+}
+
+#login-form input[type="email"] {
+	margin-bottom: -1px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+#login-form input[type="password"] {
+	margin-bottom: 10px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+#login-form .login-button,
+#login-form .login-msg {
+	height: 40px;
+}
+
+#login-form .login-button button[type="submit"] {
+	background: none;
+	border: none;
+}
+
+#login-form .login-button button[type="submit"],
+#login-form .login-msg p {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#login-form .login-msg p {
+	color: #FF0000;
+	font-weight: bold;
+}
