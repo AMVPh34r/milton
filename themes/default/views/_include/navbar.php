@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+<nav class="navbar navbar-default topnav" role="navigation">
 	<div class="container topnav">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
@@ -9,7 +9,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<span class="navbar-brand topnav"><?php echo anchor(index_page(), '<img src="themes/default/img/nav-icon.png" />'); ?></span>
+			<span class="navbar-brand topnav"><?php echo anchor(index_page(), '<img src="/themes/default/img/nav-icon.png" />'); ?></span>
 		</div>
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

@@ -101,6 +101,13 @@ hr.medium {
 	letter-spacing: 2px;
 }
 
+nav.navbar {
+	right: 0;
+	left: 0;
+	border-radius: 0;
+	margin-bottom: 0;
+}
+
 nav.navbar .navbar-brand {
 	cursor: default;
 	padding: 2px;
@@ -139,6 +146,12 @@ nav.navbar .dropdown-form li + li:before {
 /*
 	Landing Page styles
 ========================*/
+.landing nav.navbar {
+	position: fixed;
+	top: 0;
+	z-index: 999;
+}
+
 .landing a.registration-link {
 	cursor: pointer;
 }

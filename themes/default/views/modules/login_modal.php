@@ -11,7 +11,8 @@
 					<input id="login-password" name="password" class="form-control" placeholder="Password" type="password" required />
 				</div>
 				<div class="modal-footer">
-					<div class="login-msg col-lg-3 col-lg-offset-7"></div>
+					<div class="col-lg-3 text-vertical-center"><a href="#" class="registration-link" data-toggle="modal" data-target="#registerModal">Need an account?</a></div>
+					<div class="login-msg col-lg-3 col-lg-offset-4"></div>
 					<div class="login-button btn btn-primary col-lg-2">
 						<span class="progress hidden"><i class="fa fa-refresh fa-spin fa-2x"></i></span>
 						<button type="submit">Login</button>
@@ -24,6 +25,10 @@
 
 <script type="text/javascript">
 $(document).ready(function () {
+	$('.registration-link').click(function(e) {
+		$('#loginModal').modal('hide');
+	});
+
 	$("#login-form").validate({
 		submitHandler: function() {
 			$('.login-button button').hide();

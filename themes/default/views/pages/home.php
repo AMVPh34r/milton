@@ -1,7 +1,7 @@
 <?php $this->load->view('_include/header'); ?>
 
 <div class="landing">
-	<?php $this->load->view('_include/navbar_home'); ?>
+	<?php $this->load->view('_include/navbar'); ?>
 
 	<!-- Header -->
 	<header class="header parallax-bg">

@@ -1,5 +1,6 @@
 <?php
 $this->load->view('_include/header');
+$this->load->view('_include/navbar');
 
 $sMessage = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
 
@@ -41,5 +42,6 @@ $aFormData = array(
 
 <?php
 $this->load->view('_include/scripts');
+$this->load->view('modules/login_modal');
 $this->load->view('_include/html_footer');
 ?>
