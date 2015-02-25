@@ -2,6 +2,16 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Schedule extends MY_Controller {
+	public function __construct() {
+		parent::__construct();
+
+		// Redirect anonymous users to the login page
+		if (!$this->ion_auth->logged_in()) {
+			$this->session->set_flashdata('message', "You must be logged in to access that page.");
+			redirect('user/login');
+		}
+	}
+
 	public function index() {
 		$this->show();
 	}
