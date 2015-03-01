@@ -220,7 +220,7 @@ nav.navbar .dropdown-form li + li:before {
 	margin-top: 0;
 }
 
-/* Login form styles */
+/* Login/Registration form styles */
 #login-form .form-control {
 	position: relative;
 	height: auto;
@@ -244,23 +244,29 @@ nav.navbar .dropdown-form li + li:before {
 }
 
 #login-form #login-button,
-#login-form .message {
+#login-form .message,
+#register-form #register-button,
+#register-form .message {
 	height: 40px;
 }
 
-#login-form button[type="submit"] {
+#login-form button[type="submit"],
+#register-form button[type="submit"] {
 	background: none;
 	border: none;
 }
 
 #login-form button[type="submit"],
-#login-form .message p {
+#login-form .message p,
+#register-form button[type="submit"],
+#register-form .message p {
 	display: table-cell;
 	text-align: center;
 	vertical-align: middle;
 }
 
-#login-form .message p {
+#login-form .message p,
+#register-form .message p {
 	color: #FF0000;
 	font-weight: bold;
 	padding-top: 10px;

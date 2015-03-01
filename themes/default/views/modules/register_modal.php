@@ -76,8 +76,11 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-					<input type="submit" class="btn btn-primary" value="Register" />
+					<div id="register-msg" class="message col-lg-3 col-lg-offset-7"></div>
+					<div id="register-button" class="btn btn-primary col-lg-2">
+						<span id="register-progress" class="hidden form-progress"><i class="fa fa-refresh fa-spin fa-2x"></i></span>
+						<button type="submit">Register</button>
+					</div>
 				</div>
 			</form>
 		</div>
@@ -88,10 +91,18 @@
 $(document).ready(function () {
 	$("#register-form").validate({
 		submitHandler: function() {
+			$('#register-button button').hide();
+			$('#register-button #register-progress').fadeIn().removeClass('hidden');
 			$.post('ajax/register',
 				$('form#register-form').serialize(),
 				function(data){
-					// TODO interpret the response (data) and act appropriately depending on registration success
+					if (data.success === true) {
+						window.location.replace("/user/profile");
+					} else {
+						$('#register-button #register-progress').hide();
+						$('#register-button button').fadeIn();
+						$('#register-msg').html(data.message);
+					}
 				}, "json"
 			);
 		}
