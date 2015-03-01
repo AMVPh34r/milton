@@ -44,6 +44,27 @@ hr.medium {
 	background-color: #FFF;
 }
 
+.flash-message {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	top: 60px;
+	z-index: 999;
+}
+
+.flash-message p {
+	width: 85%;
+	margin: auto;
+	padding: 10px;
+	background: #33ab00;
+	opacity: 0.85;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
 /* Custom Button styles */
 .btn {
 	border-radius: 0;
@@ -80,6 +101,13 @@ hr.medium {
 	letter-spacing: 2px;
 }
 
+nav.navbar {
+	right: 0;
+	left: 0;
+	border-radius: 0;
+	margin-bottom: 0;
+}
+
 nav.navbar .navbar-brand {
 	cursor: default;
 	padding: 2px;
@@ -89,7 +117,7 @@ nav.navbar .navbar-brand img {
 	max-height: 100%;
 }
 
-nav.navbar .dropdown-menu {
+nav.navbar .login-dropdown {
 	padding: 15px;
 	min-width: 300px;
 }
@@ -118,6 +146,12 @@ nav.navbar .dropdown-form li + li:before {
 /*
 	Landing Page styles
 ========================*/
+.landing nav.navbar {
+	position: fixed;
+	top: 0;
+	z-index: 999;
+}
+
 .landing a.registration-link {
 	cursor: pointer;
 }
@@ -184,4 +218,56 @@ nav.navbar .dropdown-form li + li:before {
 
 .landing footer p {
 	margin-top: 0;
+}
+
+/* Login/Registration form styles */
+#login-form .form-control {
+	position: relative;
+	height: auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px;
+	font-size: 16px;
+}
+
+#login-form input[type="email"] {
+	margin-bottom: -1px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+#login-form input[type="password"] {
+	margin-bottom: 10px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+#login-form #login-button,
+#login-form .message,
+#register-form #register-button,
+#register-form .message {
+	height: 40px;
+}
+
+#login-form button[type="submit"],
+#register-form button[type="submit"] {
+	background: none;
+	border: none;
+}
+
+#login-form button[type="submit"],
+#login-form .message p,
+#register-form button[type="submit"],
+#register-form .message p {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#login-form .message p,
+#register-form .message p {
+	color: #FF0000;
+	font-weight: bold;
+	padding-top: 10px;
 }

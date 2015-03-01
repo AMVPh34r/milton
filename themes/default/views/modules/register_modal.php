@@ -1,19 +1,19 @@
 <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="registerModalLabel">Register</h4>
-			</div>
-			<div class="modal-body">
-				<form class="form-horizontal" name="register" method="post" action="register">
+			<form class="form-horizontal" name="register" id="register-form" method="post" action="register">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="registerModalLabel">Register</h4>
+				</div>
+				<div class="modal-body">
 					<div class="form-group">
 						<label for="register-fname" class="col-lg-3 control-label">Name:</label>
 						<div class="col-lg-4">
-							<input id="register-fname" name="fname" class="form-control" placeholder="John" type="text" required />
+							<input id="register-fname" name="name[first]" class="form-control" placeholder="John" type="text" required />
 						</div>
 						<div class="col-lg-4">
-							<input id="register-lname" name="lname" class="form-control" placeholder="Smith" type="text" required />
+							<input id="register-lname" name="name[last]" class="form-control" placeholder="Smith" type="text" required />
 						</div>
 					</div>
 					<div class="form-group">
@@ -65,21 +65,47 @@
 					<div class="form-group">
 						<label for="register-password" class="col-lg-3 control-label">Password:</label>
 						<div class="col-lg-4">
-							<input id="register-password" name="password" class="form-control" type="password" required />
+							<input id="register-password" name="password" class="form-control" type="password" minlength="6" required />
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="register-password-confirm" class="col-lg-3 control-label">Confirm Password:</label>
 						<div class="col-lg-4">
-							<input id="register-password-confirm" name="password-confirm" class="form-control" type="password" required />
+							<input id="register-password-confirm" name="password-confirm" class="form-control" type="password" minlength="6" required />
 						</div>
 					</div>
-				</form>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-				<button type="button" class="btn btn-primary">Register</button>
-			</div>
+				</div>
+				<div class="modal-footer">
+					<div id="register-msg" class="message col-lg-3 col-lg-offset-7"></div>
+					<div id="register-button" class="btn btn-primary col-lg-2">
+						<span id="register-progress" class="hidden form-progress"><i class="fa fa-refresh fa-spin fa-2x"></i></span>
+						<button type="submit">Register</button>
+					</div>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+$(document).ready(function () {
+	$("#register-form").validate({
+		submitHandler: function() {
+			$('#register-button button').hide();
+			$('#register-button #register-progress').fadeIn().removeClass('hidden');
+			$.post('ajax/register',
+				$('form#register-form').serialize(),
+				function(data){
+					if (data.success === true) {
+						window.location.replace("/user/profile");
+					} else {
+						$('#register-button #register-progress').hide();
+						$('#register-button button').fadeIn();
+						$('#register-msg').html(data.message);
+					}
+				}, "json"
+			);
+		}
+	});
+});
+</script>
