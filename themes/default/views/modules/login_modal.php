@@ -12,9 +12,9 @@
 				</div>
 				<div class="modal-footer">
 					<div class="col-lg-3 text-vertical-center"><a href="#" class="registration-link" data-toggle="modal" data-target="#registerModal">Need an account?</a></div>
-					<div class="login-msg col-lg-3 col-lg-offset-4"></div>
-					<div class="login-button btn btn-primary col-lg-2">
-						<span class="login-progress hidden"><i class="fa fa-refresh fa-spin fa-2x"></i></span>
+					<div id="login-msg" class="message col-lg-3 col-lg-offset-4"></div>
+					<div id="login-button" class="btn btn-primary col-lg-2">
+						<span id="login-progress" class="hidden form-progress"><i class="fa fa-refresh fa-spin fa-2x"></i></span>
 						<button type="submit">Login</button>
 					</div>
 				</div>
@@ -31,17 +31,17 @@ $(document).ready(function () {
 
 	$("#login-form").validate({
 		submitHandler: function() {
-			$('.login-button button').hide();
-			$('.login-button .login-progress').fadeIn().removeClass('hidden');
+			$('#login-button button').hide();
+			$('#login-button #login-progress').fadeIn().removeClass('hidden');
 			$.post('/ajax/login',
 				$('form#login-form').serialize(),
 				function(data) {
 					if (data.success === true) {
 						window.location.replace("/schedule");
 					} else {
-						$('.login-button .login-progress').hide();
-						$('.login-button button').fadeIn();
-						$('.login-msg').html(data.message);
+						$('#login-button #login-progress').hide();
+						$('#login-button button').fadeIn();
+						$('#login-msg').html(data.message);
 					}
 				}, "json"
 			);

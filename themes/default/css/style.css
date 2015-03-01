@@ -243,24 +243,25 @@ nav.navbar .dropdown-form li + li:before {
 	border-top-right-radius: 0;
 }
 
-#login-form .login-button,
-#login-form .login-msg {
+#login-form #login-button,
+#login-form .message {
 	height: 40px;
 }
 
-#login-form .login-button button[type="submit"] {
+#login-form button[type="submit"] {
 	background: none;
 	border: none;
 }
 
-#login-form .login-button button[type="submit"],
-#login-form .login-msg p {
+#login-form button[type="submit"],
+#login-form .message p {
 	display: table-cell;
 	text-align: center;
 	vertical-align: middle;
 }
 
-#login-form .login-msg p {
+#login-form .message p {
 	color: #FF0000;
 	font-weight: bold;
+	padding-top: 10px;
 }
