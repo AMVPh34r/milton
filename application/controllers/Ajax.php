@@ -2,6 +2,14 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Ajax extends MY_Controller {
+	public function __construct() {
+		parent::__construct();
+
+		// While not an actual error, set this to TRUE to disable logging visits to this controller.
+		// TODO get a better way to do this.
+		$this->bPageError = TRUE;
+	}
+
 	/**
 	* Log a user into their account via AJAX
 	*/
@@ -11,10 +19,12 @@ class Ajax extends MY_Controller {
 			// Login successful
 			$aResponse['success'] = TRUE;
 			$aResponse['message'] = $this->ion_auth->messages();
+			$this->syslog->log_event('user', 'Logged in');
 		} else {
 			// Login failed
 			$aResponse['success'] = FALSE;
 			$aResponse['message'] = $this->ion_auth->errors();
+			$this->syslog->log_event('user', 'Failed login attempt');
 		}
 		echo json_encode($aResponse);
 	}
@@ -45,15 +55,18 @@ class Ajax extends MY_Controller {
 			// Passwords did not match
 			$aResponse['success'] = FALSE;
 			$aResponse['message'] = "Passwords must match";
+			$this->syslog->log_event('user', 'Failed registration attempt');
 		} else if ($this->ion_auth->register($sUsername, $sPassword, $sEmail, $aData)) {
 			// Registration successful, log user in
 			$aResponse['success'] = TRUE;
 			$aResponse['message'] = $this->ion_auth->messages();
 			$this->ion_auth->login($sEmail, $sPassword);
+			$this->syslog->log_event('user', 'Registered new account');
 		} else {
 			// Registration failed
 			$aResponse['success'] = FALSE;
 			$aResponse['message'] = $this->ion_auth->errors();
+			$this->syslog->log_event('user', 'Failed registration attempt');
 		}
 		echo json_encode($aResponse);
 	}

@@ -57,10 +57,12 @@ class User extends MY_Controller {
 			if ($this->ion_auth->login($this->input->post('username'), $this->input->post('password'), TRUE)) {
 				// Login successful, redirect to homepage
 				$this->session->set_flashdata('message', $this->ion_auth->messages());
+				$this->syslog->log_event('user', 'Logged in');
 				redirect('/', 'refresh');
 			} else {
 				// Login unsuccessful, redirect to login page
 				$this->session->set_flashdata('message', $this->ion_auth->errors());
+				$this->syslog->log_event('user', 'Failed login attempt');
 				redirect('user/login', 'refresh');
 			}
 		} else {
@@ -76,6 +78,7 @@ class User extends MY_Controller {
 	public function logout() {
 		$this->sPageTitle = "Logout";
 
+		$this->syslog->log_event('user', 'Logged out');
 		$this->ion_auth->logout();
 		$this->session->set_flashdata('message', $this->ion_auth->messages());
 		redirect('/', 'refresh');
