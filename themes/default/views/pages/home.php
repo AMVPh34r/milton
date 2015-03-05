@@ -121,14 +121,5 @@ $this->load->view('_include/scripts');
 // Registration/login modals
 $this->load->view('modules/register_modal');
 $this->load->view('modules/login_modal');
-?>
-
-<script type="text/javascript">
-	$('.modal').on('shown.bs.modal', function(e) {
-		$(this).find('input')[0].focus();
-	});
-</script>
-
-<?php
 $this->load->view('_include/html_footer');
 ?>

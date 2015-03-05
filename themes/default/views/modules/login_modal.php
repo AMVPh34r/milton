@@ -22,30 +22,3 @@
 		</div>
 	</div>
 </div>
-
-<script type="text/javascript">
-$(document).ready(function () {
-	$('.registration-link').click(function(e) {
-		$('#loginModal').modal('hide');
-	});
-
-	$("#login-form").validate({
-		submitHandler: function() {
-			$('#login-button button').hide();
-			$('#login-button #login-progress').fadeIn().removeClass('hidden');
-			$.post('/ajax/login',
-				$('form#login-form').serialize(),
-				function(data) {
-					if (data.success === true) {
-						window.location.replace("/schedule");
-					} else {
-						$('#login-button #login-progress').hide();
-						$('#login-button button').fadeIn();
-						$('#login-msg').html(data.message);
-					}
-				}, "json"
-			);
-		}
-	});
-});
-</script>

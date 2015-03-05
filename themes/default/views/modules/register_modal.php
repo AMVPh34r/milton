@@ -86,26 +86,3 @@
 		</div>
 	</div>
 </div>
-
-<script type="text/javascript">
-$(document).ready(function () {
-	$("#register-form").validate({
-		submitHandler: function() {
-			$('#register-button button').hide();
-			$('#register-button #register-progress').fadeIn().removeClass('hidden');
-			$.post('ajax/register',
-				$('form#register-form').serialize(),
-				function(data){
-					if (data.success === true) {
-						window.location.replace("/user/profile");
-					} else {
-						$('#register-button #register-progress').hide();
-						$('#register-button button').fadeIn();
-						$('#register-msg').html(data.message);
-					}
-				}, "json"
-			);
-		}
-	});
-});
-</script>
