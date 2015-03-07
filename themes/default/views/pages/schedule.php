@@ -1,4 +1,7 @@
-<?php $this->load->view('_include/header'); ?>
+<?php
+$this->load->view('_include/header');
+$this->load->view('_include/navbar');
+?>
 
 <div class="schedule">
 	<div id="wrapper">

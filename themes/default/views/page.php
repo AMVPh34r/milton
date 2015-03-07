@@ -7,7 +7,9 @@ $this->load->view('_include/navbar');
 	Page title: <strong><?php echo $this->sPageTitle; ?></strong>
 </div>
 <?php
-$this->load->view('_include/scripts');
 $this->load->view('modules/login_modal');
+$this->load->view('modules/register_modal');
+$this->load->view('_include/footer');
+$this->load->view('_include/scripts');
 $this->load->view('_include/html_footer');
 ?>
