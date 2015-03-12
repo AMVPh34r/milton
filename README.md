@@ -7,7 +7,7 @@ Full description will go here eventually.
 ***
 ## Installing
 ### Prerequisites
-* Functional LAMP (Linux, Apache, MySQL, PHP) installation, or your platform's equivalent (Windows users can install [WampServer](http://www.wampserver.com/en/).
+* Functional LAMP (Linux, Apache, MySQL, PHP) installation, or your platform's equivalent (Windows users can install [WampServer](http://www.wampserver.com/en/)).
 
 ### Setup
 * Clone the repository or download and extract the .zip to your web root, and set up a VirtualHost if you wish (shouldn't be required).
