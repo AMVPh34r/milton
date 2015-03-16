@@ -23,13 +23,17 @@ class User extends MY_Controller {
 		}
 
 		if ($iUserID === NULL) {
-			$oUser = $this->ion_auth->user()->row();
+			$oUser = $this->oCurrUser;
 		} else {
-			$oUser = $this->ion_auth->user($iUserID)->row()->id;
+			$oUser = $this->ion_auth->user($iUserID)->row();
 		}
-
-		$this->sPageTitle = "User Profile: " . $oUser->username;
-		$this->load->view('page');
+		if ($oUser === NULL) {
+			$this->sPageTitle = "User Profile: User ID '" . $iUserID . "' not found.";
+			$this->load->view('page');
+		} else {
+			$this->sPageTitle = "User Profile: " . $oUser->username;
+			$this->load->view('page', array('oUser'=>$oUser));
+		}
 	}
 
 	/**

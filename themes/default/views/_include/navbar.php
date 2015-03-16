@@ -18,8 +18,7 @@
 				<?php if (!$this->ion_auth->logged_in()): ?>
 					<a href="#" id="navLogin" data-toggle="modal" data-target="#loginModal" role="button"><i class="fa fa-user"></i> Login</a>
 				<?php else: ?>
-					<?php $user = $this->ion_auth->user()->row(); ?>
-					<a href="#" id="navLogin" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-user"></i> <?php echo $user->first_name . ' ' . $user->last_name; ?></a>
+					<a href="#" id="navLogin" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-user"></i> <?php echo $this->oCurrUser->first_name . ' ' . $this->oCurrUser->last_name; ?></a>
 					<!-- User dropdown -->
 					<ul class="dropdown-menu">
 						<li><a href="/schedule">My Schedule</a></li>
