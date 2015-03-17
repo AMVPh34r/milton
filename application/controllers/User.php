@@ -33,6 +33,14 @@ class User extends MY_Controller {
 	}
 
 	/**
+	* Show the user's "edit profile" page, or save changes.
+	*/
+	public function edit() {
+		$this->sPageTitle = "Edit Profile";
+		$this->load->view('page');
+	}
+
+	/**
 	* Show the user's settings page, or save modified settings.
 	*/
 	public function settings() {

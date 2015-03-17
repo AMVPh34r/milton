@@ -30,9 +30,27 @@ class Schedule extends MY_Controller {
 
 	/**
 	* Allow the user to edit their schedule or class preferences.
+	*
+	* @param string $section The section of the schedule to edit.
 	*/
 	public function edit($section) {
-		$this->sPageTitle = "Edit My Schedule";
+		$this->sPageTitle = "Edit My Schedule: " . $section;
+		$this->load->view('page');
+	}
+
+	/**
+	* Modify the user's current class lineup.
+	*/
+	public function classes() {
+		$this->sPageTitle = "Add/Edit Classes";
+		$this->load->view('page');
+	}
+
+	/**
+	* Modify the user's schedule preferences.
+	*/
+	public function preferences() {
+		$this->sPageTitle = "Schedule Preferences";
 		$this->load->view('page');
 	}
 }
