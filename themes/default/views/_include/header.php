@@ -15,12 +15,14 @@
 		echo link_tag('vendor/css/reset.min.css');
 		echo link_tag('vendor/css/bootstrap.min.css');
 		echo link_tag('vendor/fonts/font-awesome/css/font-awesome.min.css');
+		echo link_tag('vendor/css/calendar.min.css');
 
 		echo link_tag($this->sThemePath . 'css/style.min.css');
 	} else {
 		echo link_tag('vendor/css/reset.css');
 		echo link_tag('vendor/css/bootstrap.css');
 		echo link_tag('vendor/fonts/font-awesome/css/font-awesome.css');
+		echo link_tag('vendor/css/calendar.css');
 
 		echo link_tag($this->sThemePath . 'css/style.css');
 	}
