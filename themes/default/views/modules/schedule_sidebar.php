@@ -2,17 +2,17 @@
 	<ul class="sidebar-nav">
 		<li class="sidebar-brand">
 			<a href="/schedule">
-				My Schedule
+				Schedule
 			</a>
 		</li>
 		<li>
-			<a href="/schedule/show">Schedule</a>
+			<a href="/schedule/classes">Add a Class</a>
 		</li>
 		<li>
-			<a href="/schedule/classes">Classes</a>
+			<a href="/schedule/preferences">Schedule Preferences</a>
 		</li>
 		<li>
-			<a href="/schedule/preferences">Preferences</a>
+			<a href="/schedule/show">View Schedule</a>
 		</li>
 		<li class="sidebar-brand">
 			<a href="/user/profile">

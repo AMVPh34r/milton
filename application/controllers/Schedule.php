@@ -50,7 +50,6 @@ class Schedule extends MY_Controller {
 	* Modify the user's schedule preferences.
 	*/
 	public function preferences() {
-		$this->sPageTitle = "Schedule Preferences";
-		$this->load->view('page');
+		$this->load->view('pages/schedule-preferences');
 	}
 }
