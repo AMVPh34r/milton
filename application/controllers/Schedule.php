@@ -43,7 +43,7 @@ class Schedule extends MY_Controller {
 	*/
 	public function classes() {
 		$this->sPageTitle = "Add/Edit Classes";
-		$this->load->view('page');
+		$this->load->view('pages/class-search');
 	}
 
 	/**

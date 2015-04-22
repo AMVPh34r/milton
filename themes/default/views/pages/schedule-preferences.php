@@ -61,7 +61,7 @@ $this->load->view('_include/navbar');
 				<div class="row">
 					<div class="col-lg-12">
 						<h1>Schedule Preferences</h1>
-						<form action="/schedule/show" method="post">
+						<form action="/schedule/show?pref" method="post">
 							<div id="pref-list">
 							<?php echo $pref_form; ?>
 							</div>

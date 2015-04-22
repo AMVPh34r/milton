@@ -1,9 +1,4 @@
 <?php
-$this->load->view('_include/header');
-$this->load->view('_include/navbar');
-?>
-
-<?php
 	if (isset($_GET['cal'])) {
 		switch($_GET['cal']) {
 			case 'empty':
@@ -25,6 +20,15 @@ $this->load->view('_include/navbar');
 	} else {
 		$img = 'calendar-empty.png';
 	}
+
+	if (isset($_GET['pref'])) {
+		echo '<div class="flash-message" style="background:green;padding-left:20%;color:white;">Preferences set</div>';
+	}
+?>
+
+<?php
+$this->load->view('_include/header');
+$this->load->view('_include/navbar');
 ?>
 
 <div class="schedule">
