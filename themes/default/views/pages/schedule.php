@@ -22,6 +22,8 @@ $this->load->view('_include/navbar');
 				$img = 'calendar-empty.png';
 				break;
 		}
+	} else {
+		$img = 'calendar-empty.png';
 	}
 ?>
 
