@@ -64,12 +64,13 @@ $classes = array(
 								<label for="class-search-id">Class</label><br />
 								<div class="col-lg-2">
 									<select name="dept" class="form-control">
+										<option disabled selected>-Choose-</option>
 										<option>ITCS</option>
 										<option>ITIS</option>
 									</select>
 								</div>
 								<div class="col-lg-3">
-									<input type="text" class="form-control" name="id" id="class-search-id" placeholder="1101">
+									<input type="text" class="form-control" name="id" id="class-search-id" placeholder="####">
 								</div>
 							</div>
 							<div clas="row">
