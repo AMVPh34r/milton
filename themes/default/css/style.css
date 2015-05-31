@@ -271,3 +271,125 @@ nav.navbar .dropdown-form li + li:before {
 	font-weight: bold;
 	padding-top: 10px;
 }
+
+
+/*
+	Schedule Page styles
+========================*/
+
+.schedule #wrapper {
+	padding-left: 0;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.schedule #wrapper.toggled {
+	padding-left: 250px;
+}
+
+.schedule #sidebar-wrapper {
+	z-index: 1000;
+	position: fixed;
+	left: 250px;
+	width: 0;
+	height: 100%;
+	margin-left: -250px;
+	overflow-y: auto;
+	background: #000;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.schedule #wrapper.toggled #sidebar-wrapper {
+	width: 250px;
+}
+
+.schedule #content-wrapper {
+	width: 100%;
+	position: absolute;
+	padding: 15px;
+}
+
+.schedule #wrapper.toggled #content-wrapper {
+	position: absolute;
+	margin-right: -250px;
+}
+
+/* Sidebar Styles */
+.schedule .sidebar-nav {
+	position: absolute;
+	top: 0;
+	width: 250px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.schedule .sidebar-nav li {
+	text-indent: 20px;
+	line-height: 40px;
+}
+
+.schedule .sidebar-nav li a {
+	display: block;
+	text-decoration: none;
+	color: #999;
+}
+
+.schedule .sidebar-nav li a:hover {
+	text-decoration: none;
+	color: #fff;
+	background: rgba(255,255,255,0.2);
+}
+
+.schedule .sidebar-nav li a:active,
+.schedule .sidebar-nav li a:focus {
+	text-decoration: none;
+}
+
+.schedule .sidebar-nav > .sidebar-brand {
+	height: 65px;
+	font-size: 18px;
+	line-height: 60px;
+}
+
+.schedule .sidebar-nav > .sidebar-brand a {
+	color: #999;
+}
+
+.schedule .sidebar-nav > .sidebar-brand a:hover {
+	color: #fff;
+	background: none;
+}
+
+@media(min-width:768px) {
+	.schedule #wrapper {
+		padding-left: 250px;
+	}
+
+	.schedule #wrapper.toggled {
+		padding-left: 0;
+	}
+
+	.schedule #sidebar-wrapper {
+		width: 250px;
+	}
+
+	.schedule #wrapper.toggled #sidebar-wrapper {
+		width: 0;
+	}
+
+	.schedule #content-wrapper {
+		padding: 20px;
+		position: relative;
+	}
+
+	.schedule #wrapper.toggled #content-wrapper {
+		position: relative;
+		margin-right: 0;
+	}
+}

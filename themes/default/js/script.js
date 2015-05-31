@@ -3,7 +3,12 @@ $(document).ready(function () {
 		// Focus first input field when modals are shown
 		$(this).find('input')[0].focus();
 	}).on('click', '.registration-link', function() {
+		// Hide login modal when registration link is clicked
 		$('#loginModal').modal('hide');
+	}).on('click', '.schedule #menu-toggle', function(e) {
+		// Toggle sidebar on schedule page
+		e.preventDefault();
+		$('.schedule #wrapper').toggleClass('toggled');
 	});
 
 	// Validate and submit user registration modal form

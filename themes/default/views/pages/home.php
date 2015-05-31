@@ -54,7 +54,7 @@
 									<i class="fa fa-graduation-cap fa-stack-1x text-primary"></i>
 								</span>
 								<h4>
-									<strong>Find Your Required Classes</strong>
+									<strong>Find Required Classes</strong>
 								</h4>
 								<p>Simply tell us your school and major, and we'll populate a list of what classes you need to take to graduate.</p>
 								<a href="#" class="btn btn-light">Learn More</a>
@@ -95,7 +95,7 @@
 								<h4>
 									<strong>Service Name</strong>
 								</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 								<a href="#" class="btn btn-light">Learn More</a>
 							</div>
 						</div>
