@@ -11,3 +11,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |	http://codeigniter.com/user_guide/general/hooks.html
 |
 */
+
+$hook['post_controller'] = array(
+	'class' => 'Syslog_hook',
+	'function' => 'log_event',
+	'filename' => 'syslog.php',
+	'filepath' => 'hooks'
+);

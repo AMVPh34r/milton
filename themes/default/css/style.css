@@ -1,7 +1,6 @@
 /*
 	Global styles
 ========================*/
-
 html,
 body {
 	width: 100%;
@@ -15,12 +14,9 @@ body {
 }
 
 .text-vertical-center {
+	display: table-cell;
 	text-align: center;
-	position: relative;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	transform: translateY(-50%);
+	vertical-align: middle;
 }
 
 .text-vertical-center h1 {
@@ -30,16 +26,43 @@ body {
 	font-weight: 700;
 }
 
-.foreground {
-	z-index: 999;
+hr {
+	margin: 1em auto;
 }
 
 hr.small {
 	max-width: 100px;
 }
 
+hr.medium {
+	width: 400px;
+	border-top: 1px solid #f8f8f8;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
 .bg-white {
 	background-color: #FFF;
+}
+
+.flash-message {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	top: 60px;
+	z-index: 999;
+}
+
+.flash-message p {
+	width: 85%;
+	margin: auto;
+	padding: 10px;
+	background: #33ab00;
+	opacity: 0.85;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 1.1em;
+	font-weight: bold;
 }
 
 /* Custom Button styles */
@@ -78,9 +101,11 @@ hr.small {
 	letter-spacing: 2px;
 }
 
-/* Navbar styles */
 nav.navbar {
-	/*position: fixed;*/
+	right: 0;
+	left: 0;
+	border-radius: 0;
+	margin-bottom: 0;
 }
 
 nav.navbar .navbar-brand {
@@ -92,7 +117,7 @@ nav.navbar .navbar-brand img {
 	max-height: 100%;
 }
 
-nav.navbar .dropdown-menu {
+nav.navbar .login-dropdown {
 	padding: 15px;
 	min-width: 300px;
 }
@@ -121,18 +146,23 @@ nav.navbar .dropdown-form li + li:before {
 /*
 	Landing Page styles
 ========================*/
+.landing nav.navbar {
+	position: fixed;
+	top: 0;
+	z-index: 999;
+}
 
-.landing img.slide-bg {
-	max-width: 100%;
-	min-height: 100%;
-	margin: 0;
-	padding: 0;
+.landing a.registration-link {
+	cursor: pointer;
 }
 
 .landing .divider {
-	width: 400px;
-	border-top: 1px solid #f8f8f8;
-	border-bottom: 1px solid rgba(0,0,0,0.2);
+	height: 150px;
+}
+
+.landing .header {
+	background: url(../img/header-bg.jpg);
+	height: 100vh;
 }
 
 .landing .header h1,
@@ -146,6 +176,11 @@ nav.navbar .dropdown-form li + li:before {
 	padding: 50px 0;
 }
 
+.landing .feature {
+	background: url(../img/about-bg.jpg);
+	height: 100vh;
+}
+
 .landing .services {
 	padding: 50px 0;
 }
@@ -156,10 +191,26 @@ nav.navbar .dropdown-form li + li:before {
 
 .landing .callout {
 	color: #FFF;
+	background: url(../img/callout-bg.jpg);
+	height: 100vh;
+}
+
+/* Style for sections with a full background */
+.landing .parallax-bg {
+	display: table;
+	position: relative;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-origin: center;
+	background-clip: center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 .landing footer {
-	position: absolute;
 	bottom: 0;
 	width: 100%;
 	padding-top: 5px;
@@ -167,4 +218,178 @@ nav.navbar .dropdown-form li + li:before {
 
 .landing footer p {
 	margin-top: 0;
+}
+
+/* Login/Registration form styles */
+#login-form .form-control {
+	position: relative;
+	height: auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px;
+	font-size: 16px;
+}
+
+#login-form input[type="email"] {
+	margin-bottom: -1px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+#login-form input[type="password"] {
+	margin-bottom: 10px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+#login-form #login-button,
+#login-form .message,
+#register-form #register-button,
+#register-form .message {
+	height: 40px;
+}
+
+#login-form button[type="submit"],
+#register-form button[type="submit"] {
+	background: none;
+	border: none;
+}
+
+#login-form button[type="submit"],
+#login-form .message p,
+#register-form button[type="submit"],
+#register-form .message p {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#login-form .message p,
+#register-form .message p {
+	color: #FF0000;
+	font-weight: bold;
+	padding-top: 10px;
+}
+
+
+/*
+	Schedule Page styles
+========================*/
+
+.schedule #wrapper {
+	padding-left: 0;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.schedule #wrapper.toggled {
+	padding-left: 250px;
+}
+
+.schedule #sidebar-wrapper {
+	z-index: 1000;
+	position: fixed;
+	left: 250px;
+	width: 0;
+	height: 100%;
+	margin-left: -250px;
+	overflow-y: auto;
+	background: #000;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.schedule #wrapper.toggled #sidebar-wrapper {
+	width: 250px;
+}
+
+.schedule #content-wrapper {
+	width: 100%;
+	position: absolute;
+	padding: 15px;
+}
+
+.schedule #wrapper.toggled #content-wrapper {
+	position: absolute;
+	margin-right: -250px;
+}
+
+/* Sidebar Styles */
+.schedule .sidebar-nav {
+	position: absolute;
+	top: 0;
+	width: 250px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.schedule .sidebar-nav li {
+	text-indent: 20px;
+	line-height: 40px;
+}
+
+.schedule .sidebar-nav li a {
+	display: block;
+	text-decoration: none;
+	color: #999;
+}
+
+.schedule .sidebar-nav li a:hover {
+	text-decoration: none;
+	color: #fff;
+	background: rgba(255,255,255,0.2);
+}
+
+.schedule .sidebar-nav li a:active,
+.schedule .sidebar-nav li a:focus {
+	text-decoration: none;
+}
+
+.schedule .sidebar-nav > .sidebar-brand {
+	height: 65px;
+	font-size: 18px;
+	line-height: 60px;
+}
+
+.schedule .sidebar-nav > .sidebar-brand a {
+	color: #999;
+}
+
+.schedule .sidebar-nav > .sidebar-brand a:hover {
+	color: #fff;
+	background: none;
+}
+
+@media(min-width:768px) {
+	.schedule #wrapper {
+		padding-left: 250px;
+	}
+
+	.schedule #wrapper.toggled {
+		padding-left: 0;
+	}
+
+	.schedule #sidebar-wrapper {
+		width: 250px;
+	}
+
+	.schedule #wrapper.toggled #sidebar-wrapper {
+		width: 0;
+	}
+
+	.schedule #content-wrapper {
+		padding: 20px;
+		position: relative;
+	}
+
+	.schedule #wrapper.toggled #content-wrapper {
+		position: relative;
+		margin-right: 0;
+	}
 }

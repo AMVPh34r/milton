@@ -8,13 +8,21 @@
 class MY_Controller extends CI_Controller {
 
 	public $sTheme = 'default';
-	public $sThemePath;
-	public $sPageTitle = 'Page';
+	public $sThemePath = '';
+	public $sPageTitle = '';
+	public $oCurrUser = NULL;
+
+	public $bPageError = FALSE;
 
 	public function __construct() {
 		parent::__construct();
 		// Set the loader to use the default theme path.
 		$this->setTheme($this->sTheme);
+
+		// If user is logged in, set global current user object.
+		if ($this->ion_auth->logged_in()) {
+			$this->oCurrUser = $this->ion_auth->user()->row();
+		}
 	}
 
 	/**
