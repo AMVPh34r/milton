@@ -1,8 +1,10 @@
 # Milton
 #### An online course-finding tool for everyone
-<sup>Curent version: alpha-0.1.1</sup>
+<sup>Curent version: 1.0.0</sup>
 
-Full description will go here eventually.
+## Project currently "abandoned"  
+I mean this was a school project all along so once we had what we needed for a presentation all active development kinda screeched to a halt.  
+Version 1.0.0 is full of hard-coded nonsense and the application isn't in a fully functional state, so don't expect to actually be able to use this, sorry.
 
 ***
 ## Installing
